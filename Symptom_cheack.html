@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom_check - Alpha Health Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>Alpha Health</h1>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="Symptom_cheack.html" class="active">Symptom Check</a>
+                    <a href="appointment.html">Appointments</a>
+                    <a href="articles.html">Health Articles</a>
+                    <a href="facilities.html">Facilities</a>
+                    <a href="emergency.html">Emergency</a>
+                    <a href="login.html">Login</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Smart Symptom Checker</h1>
+            <p>Analyze your symptoms and get health insights</p>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="disclaimer">
+        <div class="container">
+            <div class="alert alert-warning">
+                <h4>Important Disclaimer</h4>
+                <p>This symptom checker is for informational purposes only. It is NOT a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for accurate diagnosis and treatment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptom Checker Form -->
+    <section class="checker-section">
+        <div class="container">
+            <div class="checker-container">
+                <form id="symptomForm">
+                    <div class="form-group">
+                        <label for="symptoms">Select Your Symptoms (Choose multiple):</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="symptoms" value="fever"> Fever</label>
+                            <label><input type="checkbox" name="symptoms" value="cough"> Cough</label>
+                            <label><input type="checkbox" name="symptoms" value="headache"> Headache</label>
+                            <label><input type="checkbox" name="symptoms" value="sore_throat"> Sore Throat</label>
+                            <label><input type="checkbox" name="symptoms" value="fatigue"> Fatigue</label>
+                            <label><input type="checkbox" name="symptoms" value="shortness_of_breath"> Shortness of Breath</label>
+                            <label><input type="checkbox" name="symptoms" value="body_aches"> Body Aches</label>
+                            <label><input type="checkbox" name="symptoms" value="nausea"> Nausea</label>
+                            <label><input type="checkbox" name="symptoms" value="diarrhea"> Diarrhea</label>
+                            <label><input type="checkbox" name="symptoms" value="chest_pain"> Chest Pain</label>
+                            <label><input type="checkbox" name="symptoms" value="dizziness"> Dizziness</label>
+                            <label><input type="checkbox" name="symptoms" value="rash"> Rash</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">Duration of Symptoms:</label>
+                        <select id="duration" name="duration">
+                            <option value=""> Select Duration </option>
+                            <option value="less_than_24">Less than 24 hours</option>
+                            <option value="1_to_3_days">1-3 days</option>
+                            <option value="4_to_7_days">4-7 days</option>
+                            <option value="more_than_week">More than a week</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="severity">Severity Level:</label>
+                        <select id="severity" name="severity">
+                            <option value="">Select Severity </option>
+                            <option value="mild">Mild</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="severe">Severe</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Analyze Symptoms</button>
+                </form>
+
+                <!-- Results Section -->
+                <div id="results" style="display:none;">
+                    <div class="results-container">
+                        <h2>Analysis Results</h2>
+                        <div class="alert alert-info">
+                            <p id="resultMessage"></p>
+                        </div>
+                        <div id="conditionsList" class="conditions-list"></div>
+                        <div class="recommendations">
+                            <h3>Recommendations:</h3>
+                            <ul id="recommendationsList"></ul>
+                        </div>
+                        <button class="btn btn-secondary" onclick="resetForm()">Check Again</button>
+                        <button class="btn btn-primary" onclick="window.location.href='appointment.html'">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Alpha Health Solutions provides comprehensive online healthcare support.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email:alphahealthsolutions@gmail.com</p>
+                    <p>Phone: +256 743-182-927</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Alpha Health Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
